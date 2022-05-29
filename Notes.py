@@ -4,8 +4,8 @@ from tracemalloc import stop
 WhatDoing=input("Welcome to Notepad\nWhat are you doing? To log in press 'l' to register press 'r'")
 if WhatDoing.lower()=="r":
     log=input("Login:")
-    str_path= "C:/Users/damia/OneDrive/Pulpit/Notes 2/User/"+log+"/login.txt"
-    path=os.path.join("C:/Users/damia/OneDrive/Pulpit/Notes 2/User",log)
+    str_path= "Inser path there"+log+"/login.txt"
+    path=os.path.join("Inser path there",log)
     try:
         os.mkdir(path)
     except FileExistsError:
@@ -16,7 +16,7 @@ if WhatDoing.lower()=="r":
     login.writelines(log)
     password1=input("password:")
     login.close()
-    str_path= "C:/Users/damia/OneDrive/Pulpit/Notes 2/User/"+log+"/Password.txt"
+    str_path= ""Inser path there""+log+"/Password.txt"
     path=Path(str_path)
     password=open(path, 'a' )
     password.writelines(password1)
@@ -25,7 +25,7 @@ elif WhatDoing.lower()=="l":
     index=0
     exist=0
     UserLogin=input("Login : ")
-    str_path= "C:/Users/damia/OneDrive/Pulpit/Notes 2/User/"+UserLogin+"/login.txt"
+    str_path= "C:"Inser path there""+UserLogin+"/login.txt"
     path=Path(str_path)
     login=open(path, 'r')
     UserPasword=input("Password: ")
@@ -35,7 +35,7 @@ elif WhatDoing.lower()=="l":
             exist+=1
             break
     login.close()
-    str_path= "C:/Users/damia/OneDrive/Pulpit/Notes 2/User/"+UserLogin+"/Password.txt"
+    str_path= ""Inser path there""+UserLogin+"/Password.txt"
     path=Path(str_path)
     password=open(path,'r')
     for line in password:
@@ -47,7 +47,7 @@ elif WhatDoing.lower()=="l":
     if exist==2:
         print("zalogowano")
         while True:
-            str_path= "C:/Users/damia/OneDrive/Pulpit/Notes 2/User/"+UserLogin+"/Blog.txt"  
+            str_path= ""Inser path there""+UserLogin+"/Blog.txt"  
             path=Path(str_path)  
             answer=input("What you wanna do? \n Write = 'w' or read = 'r' or 'c' to clear or quit 'q'")
             if answer == "w":
