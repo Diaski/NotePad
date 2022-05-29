@@ -1,6 +1,5 @@
 from pathlib import Path
 import os
-from tracemalloc import stop
 WhatDoing=input("Welcome to Notepad\nWhat are you doing? To log in press 'l' to register press 'r'")
 if WhatDoing.lower()=="r":
     log=input("Login:")
